@@ -1,0 +1,139 @@
+.chatsection{
+    /* background-color: rgb(22, 32, 33); */
+    background-color:var(--background-color);  /* to use that css var from index.css to specifi comp. css*/
+    height: 100vh;
+    flex: 1;   /*it tell the item Take the available extra space and grow*/
+}
+.topsection{
+    width: 100%;
+    height: 75vh;
+    /* background-color: rgb(88, 150, 204); */
+}
+.bottomsection{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.headings{
+    width:100%;
+    height: 100%;
+    overflow: hidden; /* means nothing goes outside heading*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2vmax;
+    text-align: center;
+}
+.headings span:nth-child(1){
+    font-size: 4em; /* double of 2vmax taking acc to parent = 4vmax*/
+    font-weight: 600;
+    background: linear-gradient(to right,rgb(222, 19, 101),rgb(89, 190, 215),rgb(194, 193, 193));
+    background-clip: text;/* Show background ONLY inside text shape means letters*/
+    color:transparent; /*Hides only normal text color but gradient backgd still visible through text(letters shape*/
+}
+.headings span:nth-child(2){
+    font-size: 2.9em; /* double of 2vmax taking acc to parent = 4vmax*/
+    font-weight: 600;
+    background: linear-gradient(to right,rgb(19,198, 222),rgb(212 ,31, 107),rgb(194, 193, 193));
+    background-clip: text;/* Show background ONLY inside text shape means letters*/
+    color:transparent; /*Hides only normal text color but gradient backgd still visible through text(letters shape*/
+}
+.headings span:nth-child(3){
+    font-size: 1.5em; /* double of 2vmax taking acc to parent = 4vmax*/
+    color:var(--color);
+    opacity: 0.8; /*controls transparency of element 1 visible or 0 invisible*/
+}
+.bottomsection input{
+    width: 50%;
+    height: 60px;
+    padding: 20px;
+    font-size: 20px;
+    background-color:var(--btn-background-color);
+    color: var(--btn-color);/*svg color works as text color matches*/
+    border-radius:40px;
+    outline: none;
+    border: none;
+    box-shadow:2px 2px 10px black;
+}
+#sentbtn{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background-color:var(--btn-background-color);
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow:2px 2px 10px black;
+}
+#sentbtn:hover{
+     background-color: var(--hover-btn-background-color);
+}
+#sentbtn svg{
+    width: 30px;
+    height: 30px;
+    color:var(--btn-color)
+}
+.userbox{
+    display: flex;
+    gap:20px;
+    align-items: start;
+    color: var(--color);
+}
+.aibox{
+    display: flex;
+    gap:20px;
+    align-items: start;
+    color: var(--color);
+}
+.aibox p{
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+    font-size: 20px;
+}
+.result img{
+    filter: drop-shadow(2px 2px 10px black);  /*drop-shawdow is one of the effect/function provided by the filter property.Its adds shadow/glow around element*/
+}
+.loader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.loader hr{
+    height: 20px;
+    border: none;
+    background-color: aliceblue;/*agr linear grad wala back ni dikhra to by default ye dikhna chhaiye iske upr*/
+    border-radius: 20px;
+    background: linear-gradient(to right,rgb(118, 210, 215),var(--background-color),rgb(118, 210, 215));
+    background-size: 800px 50px; /*width or height. controls w or h of background image or gradient and used to make animated gradient wide enough for the shimmer/loading effect*/
+    animation: loader 2s linear infinite;
+}
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+@media (max-width:800px){
+    .headings{
+        font-size: 1.5vmax;
+        padding: 10px;
+    }
+}
