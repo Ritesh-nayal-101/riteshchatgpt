@@ -8,6 +8,8 @@ An AI-powered ChatGPT Clone built with **React.js** and **Google Gemini API**, p
 * Google Gemini API integration
 * Clean and responsive UI
 * Chat history support
+* New chat functionality
+* Dark/Light theme support
 * Dynamic loading animations
 * Fast performance with React and Vite
 
@@ -35,7 +37,7 @@ This project replicates the core functionality of ChatGPT by allowing users to i
 ## Future Enhancements
 
 * User authentication
-* Dark/Light mode
+* Conversation Search Functionality
 * Chat export functionality
 * Conversation persistence
 * Multiple AI model support
